@@ -1,0 +1,54 @@
+{
+  "servers": {
+    "filesystem-project": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant\\src",
+        "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant\\specs",
+        "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant\\skills"
+      ]
+    },
+    "filesystem-docs": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant\\docs\\novatech",
+        "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant\\data\\retrieval-corpus"
+      ]
+    },
+    "git": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant"
+      ]
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "C:\\git\\dgs-ai-first\\pratica-2\\novatech-assistant\\.mcp\\memory.json"
+      }
+    },
+    "everything": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ]
+    }
+  },
+  "inputs": []
+}
